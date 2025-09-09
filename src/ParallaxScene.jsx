@@ -21,6 +21,17 @@ const ParallaxScene = () => {
                     // markers: true, // Uncomment for debugging
                 },
             })
+            gsap.to(".bird", {
+                x: "-100vw", // Move left across the full viewport width
+                ease: "none",
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                    // markers: true, // Uncomment to debug
+                },
+            });
         })
         gsap.from(".welcome-text", {
             opacity: 1,
