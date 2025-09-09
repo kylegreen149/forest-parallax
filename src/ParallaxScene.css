@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh; /* or more */
+}
+
+.parallax-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.background { z-index: 1; background-image: url('./forest-parallax-pics/background.png'); }
+.forest     { z-index: 2; background-image: url('./forest-parallax-pics/forest.png'); }
+.foliage   { z-index: 3; background-image: url('./forest-parallax-pics/foliage.png'); }
+.bird      { z-index: 4; background-image: url('./forest-parallax-pics/bird.png'); }
+
+.welcome-text {
+  position: absolute;
+  z-index: 5; /* Make sure it's above all layers */
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: rgb(170, 175, 11);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Improves contrast */
+  pointer-events: none; /* Prevents accidental interaction */
+}
